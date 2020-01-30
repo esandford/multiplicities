@@ -112,7 +112,7 @@ implicit none
 
 
  ! fake radii file name
- radpart1 = '//rigel/home/es3197/multiPlanetDist_fixedForecaster/fakes/poisson/fake_keplerradii_'
+ radpart1 = '/rigel/home/es3197/multiPlanetDist_fixedForecaster/fakes/poisson/fake_keplerradii_'
  radpart3 = '.dat'
  radcombinedfilename = trim(radpart1) // trim(countfilenamei) // trim(radpart3)
  

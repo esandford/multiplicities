@@ -100,7 +100,7 @@ implicit none
  ! instead we want to read in our "fake" counts
 
  ! fake count file name
- countpart1 = '/rigel/home/es3197/fakes_correlatedRadii/poisson/fitZipftofakePoisson/fake_keplercounts_'
+ countpart1 = '/rigel/home/es3197/multiPlanetDist_fixedForecaster/fakes/poisson/fake_keplercounts_'
  countpart3 = '.dat'
  CALL GETARG(3, countfilenamei)
  countcombinedfilename = trim(countpart1) // trim(countfilenamei) // trim(countpart3)
@@ -112,7 +112,7 @@ implicit none
 
 
  ! fake radii file name
- radpart1 = '/rigel/home/es3197/fakes_correlatedRadii/poisson/fitZipftofakePoisson/fake_keplerradii_'
+ radpart1 = '/rigel/home/es3197/multiPlanetDist_fixedForecaster/fakes/poisson/fake_keplerradii_'
  radpart3 = '.dat'
  radcombinedfilename = trim(radpart1) // trim(countfilenamei) // trim(radpart3)
  
@@ -125,7 +125,7 @@ implicit none
  call getkeplerradii(ikep,keplerradii)
  
  ! chain file name
- part1 = '/rigel/home/es3197/fakes_correlatedRadii/poisson/fitZipftofakePoisson/mcmc_pop'
+ part1 = '/rigel/home/es3197/multiPlanetDist_fixedForecaster/fakes/poisson/fitZipftofakePoisson/mcmc_pop'
  part2 = '_run'
  part3 = '.dat'
  CALL GETARG(1, filenamei)
@@ -307,7 +307,7 @@ INTEGER, DIMENSION(nmathur) :: Q10i, Q11i, Q12i, Q13i, Q14i, Q15i, Q16i, Q17i
 LOGICAL, DIMENSION(nmathur), INTENT(OUT) :: Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9
 LOGICAL, DIMENSION(nmathur), INTENT(OUT) :: Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17
 
-OPEN(unit=101,file='mathur.dat')
+OPEN(unit=101,file='../../../mathur.dat')
 
 DO i = 1,nmathur
  
@@ -455,7 +455,7 @@ INTEGER :: i
 INTEGER, INTENT(IN) :: nkep
 REAL(8), DIMENSION(nkep), INTENT(OUT) :: keplerradii
 
-! OPEN(unit=104,file='keplerradii.dat')
+! OPEN(unit=104,file='../../../keplerradii.dat')
 ! read in fake kepler radii
 OPEN(unit=104,file=radcombinedfilename)
 
