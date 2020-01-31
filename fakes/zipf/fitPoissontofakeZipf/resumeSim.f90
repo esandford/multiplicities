@@ -1,6 +1,7 @@
 PROGRAM sim
 use librarymod
 use modelmod
+use randommod
 
 implicit none
 
@@ -79,6 +80,7 @@ implicit none
  ntogo = 1000 - nstepsalready_int
 
  call randomreal(.TRUE.,randy)
+ p = random_Poisson(2.0, .TRUE.)
  
  ! log em
  logPmin = DLOG(Pmin)
