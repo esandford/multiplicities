@@ -1,0 +1,5 @@
+Test & AIC\\
+fitPoissontofakePoisson & $38.158\pm2.872$\\
+fitZipftofakePoisson & $37.952\pm2.872$\\
+fitPoissontofakeZipf & $53.591\pm2.872$\\
+fitZipftofakeZipf & $45.903\pm2.872$\\
